@@ -364,10 +364,17 @@
 })(document.documentElement);
 
 let submit_button = document.querySelector('#submit');
+let preloader_container = document.querySelector('.preloader_container');
 
 
 submit_button.onclick = () => {
     window.alert("Thank you. We will call you shortly.");
+
+    preloader_container.classList.add('active');
+    // Добавляем задержку на 5 секунд
+    setTimeout(() => {
+        preloader_container.classList.remove('active');
+    }, 3000); // 3000 миллисекунд =  3 секунд
 }
 // GOOGL FORM 
 

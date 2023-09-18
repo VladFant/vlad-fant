@@ -4275,3 +4275,36 @@ img.u-pull-left {
         right : 6vw;
     }
 }
+
+    
+.preloader_container {
+position: absolute;
+margin-top: 25%;
+margin-left: 50%;
+display: none;
+}
+
+.preloader_container.active {
+    display: block;
+}
+
+.preloader {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 8px solid black;
+    box-sizing: border-box;
+    border-top-color: orange;
+    background: beige;
+    animation: preloader 1.2s linear infinite;
+}
+
+@keyframes preloader {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
